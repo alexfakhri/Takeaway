@@ -1,4 +1,4 @@
-class Customer
+class CustomerOrder
 
 	def initialize
 		@shopping_basket = []
