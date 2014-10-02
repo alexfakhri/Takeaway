@@ -8,14 +8,22 @@ describe Dish do
 		expect(dish.price).to eq 0
 	end
 
+	# it 'has a name and a price' do
+	# 	dish = Dish.new(name: "Dish", price: 0.0)
+	# 	expect(dish.name).to eq 'Dish'
+	# 	expect(dish.price).to eq 0.0
+	# end
+
 	it "has a burger on the menu with price" do
 		burger = Dish.burger
 		expect(burger.price).to eq (3.00)
+		expect(burger.name).to eq ("Burger")
 	end
 
 	it "has chips on the menu with price" do
 		chips = Dish.chips
 		expect(chips.price).to eq (1.50)
+		expect(chips.name).to eq ("Chips")
 	end
 
 	it "has chicken kebab on the menu with price" do
