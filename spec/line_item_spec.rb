@@ -1,23 +1,27 @@
-# can be initialized with a dish and it's quantity
-# has a total
-# drinks = LineItem.new(Dish.new(name: 'Coke', price: 1.4), 4)
-# exp total = ... / dish.price * qt
+require 'line_item'
+
+describe LineItem do
+
+	let(:line_item) { LineItem.new(:dish, 1)}
+	
+	
+	it "Should be initialized with a dish" do
+		expect(line_item.dish).to eq :dish
+	end
 
 
-# Order
-# takes some line items
-# calculates the total
+	it "Should be able to hold more than one dish" do
+		line_item = LineItem.new(:dish, 3)
+		expect(line_item.quantity).to eq(3)
+	end
 
-# Takeaway
-# takes an order from a customer 
-# collect_order_from_customer(customer, order)
+	it "should be able to give total for line item" do
+		dish = double :dish, price: 3.00
+		line_item = LineItem.new(dish, 3)
+		expect(line_item.total).to eq 9.00
+	end
 
-# sends a message to the customer
 
 
-# Customer
-# has name, phone number
 
-# Message
-# Message.new(for_customer: :customer, with_order: :order).send_sms
-# send_sms 
+end
