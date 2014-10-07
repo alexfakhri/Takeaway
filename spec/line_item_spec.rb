@@ -21,7 +21,4 @@ describe LineItem do
 		expect(line_item.total).to eq 9.00
 	end
 
-
-
-
 end

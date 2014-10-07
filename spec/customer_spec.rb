@@ -12,11 +12,7 @@ describe Customer do
 		expect(customer.number).to eq '07898584534'
 	end
 
-
-
-
 end
 
-# customer name
-# customer number
-# 
+
+	
