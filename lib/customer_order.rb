@@ -11,9 +11,5 @@ class CustomerOrder
 	def add_to_order(dish)
 		@shopping_basket << dish
 	end
-
 	
-
-
-
 end
