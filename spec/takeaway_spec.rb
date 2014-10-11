@@ -1,4 +1,7 @@
 require 'takeaway'
+require 'rubygems' 
+require 'twilio-ruby'
+
 
 describe Takeaway do
 
@@ -6,6 +9,7 @@ describe Takeaway do
 	let(:dish) { double :dish}
 	let(:burger_line) { double :line_item, dish: :burger, quantity: 3, subtotal: 9 }
 	let(:chips_line) { double :line_item, dish: :chips, quantity: 2, subtotal: 3 }
+	let(:customer) { double :customer, name: 'Alex'}
 
 
 	it "Should give a total for the complete order" do
@@ -23,7 +27,10 @@ describe Takeaway do
 		expect(takeaway.total_order_cost).to eq(12)
 	end
 
+	it "should be able to send a message" do
+		expect(takeaway.send_message)
 
-	
+
+	end
 	
 end
